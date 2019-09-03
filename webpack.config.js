@@ -35,7 +35,14 @@ const webpackConfig = {
     module: {
         rules: [
             { test: /\.(ts|js)x?$/, exclude: /node_modules/,  use: 'babel-loader' },
-            { test: /\.css$/, use: [ 'bstyle-loader', 'css-loader' ] },
+            { 
+                test: /\.s[ac]ss$/i, 
+                use: [ 
+                    'style-loader', 
+                    'css-loader',
+                    'sass-loader',
+                ] 
+            },
         ]
     },
     mode: process.env.NODE_ENV,
@@ -55,23 +62,13 @@ const webpackConfig = {
                     test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
                     name: "react~vendors"
                 },
-                //     vendor: {
-                //         test: /[\\/]node_modules[\\/]/,
-                //         name(module) {
-                //             // get the name. E.g. node_modules/packageName/not/this/part.js
-                //             // or node_modules/packageName
-                //             const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-                //             // npm package names are URL-safe, but some servers don't like @ symbols
-                //             return `npm.${packageName.replace('@', '')}`;
-                //         },
-                //     },
             }
         },
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: "assets/index.html",
-            favicon: 'assets/icon.ico',
+            favicon: 'assets/icons/icon.ico',
             inlineSource: 'runtime~.+\\.js',
         }),
         new InlineSourcePlugin(),
@@ -97,8 +94,8 @@ const webpackConfig = {
             openAnalyzer: false,
         }),
         new WebpackPwaManifest({
-            name: 'My Progressive Web App',
-            short_name: 'MyPWA',
+            name: 'Red Ventures Test',
+            short_name: 'Red Ventures Test',
             description: 'My Awesome Progressive Web App!',
             background_color: '#fff',
             theme_color: '#fff',
@@ -107,7 +104,7 @@ const webpackConfig = {
             orientation: "portrait",
             icons: [
                 {
-                    src: path.resolve('src/assets/icon.png'),
+                    src: path.resolve('src/assets/icons/icon.png'),
                     sizes: [192, 256, 512],
                     ios: true
                 }
@@ -115,7 +112,7 @@ const webpackConfig = {
             ios: {
                 // 'apple-touch-icon': string | IosAppleTouchIcon,
                 // 'apple-touch-startup-image': string,
-                'apple-mobile-web-app-title': 'MyPWA',
+                'apple-mobile-web-app-title': 'Red Ventures Test',
                 'apple-mobile-web-app-capable': true,
                 'apple-mobile-web-app-status-bar-style':  'black'
             },
