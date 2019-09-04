@@ -1,12 +1,11 @@
-import React from 'react';
-import  './App.scss';
+import React, {Fragment} from 'react';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
     return (
-        <div className='App'>
+        <Fragment>
             <Home/>
-        </div>
+        </Fragment>
     )
 };
 

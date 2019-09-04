@@ -1,0 +1,17 @@
+// @font-face {
+//     font-family: 'Saira Condensed';
+//     src: url('https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500&display=swap');
+//   }
+
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500&display=swap');
+
+body, html, main {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+main {
+    display: flex;
+}

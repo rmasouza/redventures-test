@@ -1,0 +1,32 @@
+@import "../../styles/utils.scss";
+
+.home-content {
+    > .headline {
+        text-align: left;
+        letter-spacing: 10.84px;
+        color: #0F1C2D;
+        margin: 0;
+        font-size: 30px;
+        line-height: 36px;
+
+        &.-featured {
+            letter-spacing: 12.5px; 
+            font-size: 150px;
+            line-height: 150px;
+        }  
+
+        &.-red {
+            @extend .red-text ;
+        }
+
+        &.-inline {
+            display: inline;
+        }
+    }
+
+    > .car {
+
+    }
+
+    padding: 72px;
+}

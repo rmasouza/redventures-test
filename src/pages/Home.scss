@@ -1,3 +1,6 @@
 .home-page {
-    font-weight: 500;
+    padding: 31px 116px;
+    display: grid;
+    grid-template-rows: 25px auto 85px;
+    flex-grow: 1;
 }

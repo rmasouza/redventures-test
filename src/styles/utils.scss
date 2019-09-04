@@ -1,0 +1,17 @@
+@import "./colors.scss";
+
+.red-text {
+    color: $primary-color;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
