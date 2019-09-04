@@ -1,7 +1,7 @@
 @import "../../styles/utils.scss";
 
 .home-content {
-    > .headline {
+    .headline {
         text-align: left;
         letter-spacing: 10.84px;
         color: #0F1C2D;
@@ -24,9 +24,14 @@
         }
     }
 
-    > .car {
-
+    > .carfigure {
+        margin: 0;
+        display: flex;
+        justify-content: center;
     }
 
-    padding: 72px;
+    padding: 0 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

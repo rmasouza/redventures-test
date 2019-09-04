@@ -6,6 +6,9 @@ const Header = () => {
     return (
         <header className='header-component'>
             <RedVenturesLogo/> 
+            <nav>
+                
+            </nav>
          </header>
     )
 }

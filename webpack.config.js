@@ -22,7 +22,7 @@ console.log(process.env.NODE_ENV);
 const webpackConfig = {
     context: sourcePath,
     entry: {
-        main:'./index.tsx',
+        main: './index.tsx',
     },
     output: {
         path: outputhPath,
@@ -34,15 +34,21 @@ const webpackConfig = {
     },
     module: {
         rules: [
-            { test: /\.(ts|js)x?$/, exclude: /node_modules/,  use: 'babel-loader' },
-            { 
-                test: /\.s[ac]ss$/i, 
-                use: [ 
-                    'style-loader', 
+            { test: /\.(ts|js)x?$/, exclude: /node_modules/, use: 'babel-loader' },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
                     'css-loader',
                     'sass-loader',
-                ] 
+                ]
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     },
     mode: process.env.NODE_ENV,
@@ -98,14 +104,24 @@ const webpackConfig = {
             short_name: 'Red Ventures Test',
             description: 'My Awesome Progressive Web App!',
             background_color: '#fff',
-            theme_color: '#fff',
+            theme_color: '#AB1725',
             display: 'standalone',
             start_url: ".",
             orientation: "portrait",
             icons: [
                 {
-                    src: path.resolve('src/assets/icons/icon.png'),
-                    sizes: [192, 256, 512],
+                    src: path.resolve('src/assets/icons/icon-192.png'),
+                    sizes: [192],
+                    ios: true
+                },
+                {
+                    src: path.resolve('src/assets/icons/icon-256.png'),
+                    sizes: [256],
+                    ios: true
+                },
+                {
+                    src: path.resolve('src/assets/icons/icon-512.png'),
+                    sizes: [512],
                     ios: true
                 }
             ],
@@ -114,7 +130,7 @@ const webpackConfig = {
                 // 'apple-touch-startup-image': string,
                 'apple-mobile-web-app-title': 'Red Ventures Test',
                 'apple-mobile-web-app-capable': true,
-                'apple-mobile-web-app-status-bar-style':  'black'
+                'apple-mobile-web-app-status-bar-style': 'black'
             },
         }),
         new Dotenv({
@@ -141,4 +157,4 @@ const webpackConfig = {
     }
 };
 
-module.exports=webpackConfig;
+module.exports = webpackConfig;

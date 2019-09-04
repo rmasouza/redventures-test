@@ -9,3 +9,5 @@ declare namespace NodeJS {
     PUBLIC_URL: string;
   }
 }
+
+declare module '*.png';
