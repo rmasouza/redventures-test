@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
+import './HomeFooterItem.scss';
 
-const HomeFooterItem = () => {
+interface IHomeFooterItem {
+    value: number;
+    unity: string;
+    description: string;
+}
+const HomeFooterItem: FC<IHomeFooterItem> = ({ value, unity, description }) => {
 
     return (
-        <span>
-            i
-        </span>
+        <p className='home-footer-item'>
+            <strong className='value'>{value} <sub className='unity'>{unity}</sub> </strong>
+            <span className='description'>{description}</span>
+        </p>
     )
 }
 

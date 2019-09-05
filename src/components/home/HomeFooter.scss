@@ -1,4 +1,6 @@
-.homefotter-component {
-    height: 85px;
-    background-color: bisque;
+.home-fotter {    
+    // background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

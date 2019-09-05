@@ -1,0 +1,22 @@
+@import "../../styles/colors.scss";
+
+.button-link {
+    color: $secondary-color;
+    text-decoration: none;
+    text-align: center;
+    
+    > .text{
+        text-transform: uppercase;
+        font-family: Helvetica;
+        font-size: 16px;
+        
+        &.-with-latter-space {
+            letter-spacing: 9.42px;
+        }
+    }
+
+
+    > .icon {
+        margin-left: 15px;
+    }
+}

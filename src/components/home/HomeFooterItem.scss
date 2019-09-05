@@ -1,0 +1,32 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.home-footer-item {
+    height: 85px;
+    margin: 0;
+    min-width: 110px;
+    // background-color: aquamarine;
+
+    border-bottom: 3px solid $primary-color;
+
+    > .value {
+        @extend .red-text ;
+        // font-size: 36px;
+        font-size: 42px;
+
+    }
+
+    .unity {
+        vertical-align: baseline;
+        font-size: 14px;
+        font-size: 15px;
+    }
+
+    > .description {
+        display: block;
+        font-size: 18px;
+        color: #0F1C2D;
+        margin-top: -14px;
+        letter-spacing: 1.5px;
+    }
+}
