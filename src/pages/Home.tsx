@@ -4,14 +4,14 @@ import Header from '../components/common/Header';
 import HomeFooter from '../components/home/HomeFooter';
 import HomeContent from '../components/home/HomeContent';
 import { useStore } from '../stores/StoreProvider';
+import { observer } from 'mobx-react-lite';
 
-const Home = () => {
+const HomeBase = () => {
     const store = useStore();
 
     useEffect(() => {
-        console.log(store)
-        store.getApiResponse()
-    })
+         store.getApiResponse();
+    },[])
 
     return (
         <article className='home-page'>
@@ -22,4 +22,5 @@ const Home = () => {
     )
 }
 
+const Home = observer(HomeBase)
 export default Home;
