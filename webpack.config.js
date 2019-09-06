@@ -26,6 +26,7 @@ const webpackConfig = {
     },
     output: {
         path: outputhPath,
+        publicPath: '/',
         filename: "[name].[chunkhash].js",
         chunkFilename: '[name]-[chunkhash].js'
     },
@@ -73,8 +74,8 @@ const webpackConfig = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "assets/index.html",
-            favicon: 'assets/icons/icon.ico',
+            template: "./assets/index.html",
+            favicon: './assets/icons/icon.png',
             inlineSource: 'runtime~.+\\.js',
         }),
         new InlineSourcePlugin(),
@@ -86,7 +87,7 @@ const webpackConfig = {
                     urlPattern: /^https?.*/,
                     handler: 'NetworkFirst',
                     options: {
-                        cacheName: 'MyPwaCache',
+                        cacheName: 'RedVenturusTestCache',
                         expiration: {
                             maxEntries: 200
                         }
@@ -151,6 +152,7 @@ const webpackConfig = {
     devServer: {
         compress: true,
         port: process.env.PORT,
+        historyApiFallback: true,
         before(app) {
             app.use(compression({}));
         },
