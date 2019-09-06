@@ -2,7 +2,7 @@ import React from 'react';
 import './HomeContent.scss';
 import CarHome from "../../assets/images/car-home.png";
 import ButtonLink from '../common/ButtonLink';
-import ArrowIcon from '../icons/ArrowIcon';
+import ArrowIcon from '../common/icons/ArrowIcon';
 
 const HomeContent = () => {
     return (
@@ -20,7 +20,7 @@ const HomeContent = () => {
             <figure className='carfigure'>
                 <img src={CarHome} style={{marginTop: -64}}/>
             </figure>
-            <ButtonLink to={'/'} text={'Begin'} withLatterSpace icon={<ArrowIcon/>}/>
+            <ButtonLink to={'/engines'} text={'Begin'} withLatterSpace icon={<ArrowIcon/>}/>
         </section>
     )
 }

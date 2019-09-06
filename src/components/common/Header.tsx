@@ -1,11 +1,14 @@
 import React from 'react';
-import RedVenturesLogo from '../icons/RedVenturesLogo';
+import RedVenturesLogo from './icons/RedVenturesLogo';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <header className='header-component'>
-            <RedVenturesLogo/> 
+            <Link to={'/'}>
+                <RedVenturesLogo/> 
+            </Link>
             <nav>
                 
             </nav>

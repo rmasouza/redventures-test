@@ -1,12 +1,12 @@
 @import "../styles/utils.scss";
 
-.home-page {
+.engines-page {
     display: grid;
     grid-template-rows: max-content auto max-content;
     flex-grow: 1;
-    // padding: 31px 116px;
 
-    &:only-child {
-        padding: 0 116px;
+     .header-component {
+        padding-left: 116px; 
+        padding-right: 116px;
     }
 }

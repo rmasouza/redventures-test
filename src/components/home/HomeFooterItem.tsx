@@ -9,10 +9,10 @@ interface IHomeFooterItem {
 const HomeFooterItem: FC<IHomeFooterItem> = ({ value, unity, description }) => {
 
     return (
-        <p className='home-footer-item'>
+        <footer className='home-footer-item'>
             <strong className='value'>{value} <sub className='unity'>{unity}</sub> </strong>
             <span className='description'>{description}</span>
-        </p>
+        </footer>
     )
 }
 
