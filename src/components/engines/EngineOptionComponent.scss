@@ -1,0 +1,63 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.engine-option {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0;
+    background: #F7F9FA;
+    border: solid 1px #fff;
+    color: $default-gray;
+    cursor: pointer;
+    margin-bottom: 60px;
+    position: relative;
+
+    &:hover {
+        border-color: $primary-color;
+    }
+
+    &::after {
+        content: attr(data-price);
+        position: absolute;
+        right: 0;
+        bottom: -36px;
+        font-size: 22px;
+        color: $primary-color;
+        text-align: right;
+    }
+
+    &.-current {
+        color: $secondary-color;
+        .strong {
+            color: $primary-color;
+        }
+
+        > .indicator {
+            background: $primary-color;
+        }
+    }
+
+
+    > .primary-text {
+        font-size: 34px;
+        letter-spacing: 2.83px;
+    }
+
+    > .secondary-text {
+        font-size: 22px;
+        letter-spacing: 2.83px;
+    }
+
+    .strong {
+        @extend .medium;
+    }
+
+    > .indicator {
+        height: 22px;
+        width: 22px;
+        background: #fff;
+        border-radius: 100px; 
+    }
+}

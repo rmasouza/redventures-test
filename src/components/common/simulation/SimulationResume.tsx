@@ -1,16 +1,34 @@
 import React from 'react';
 import './SimulationResume.scss';
+import { observer } from 'mobx-react-lite';
+import { useStore } from '../../../stores/StoreProvider';
 
-const SimulationResume = () => {
+const SimulationResumeBase = () => {
+    const store = useStore();
+    
     return (
         <footer className='simulation-resume'>
-            <span>a</span>
-            <span>b</span>
-            <span>c</span>
-            <span>D</span>
-            <span>E</span>
+            <span>{store.finalPrice}</span>
+
+            <span>Model R</span>
+
+            <span>
+            {
+                store.currentEngine && `${store.currentEngine.kwh} ${store.currentEngine.type}`
+            }
+            </span>
+
+            
+            <span>
+
+            </span>
+            <span>
+
+            </span>
         </footer>
     )
 }
+
+const SimulationResume = observer(SimulationResumeBase)
 
 export default SimulationResume;

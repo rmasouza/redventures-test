@@ -1,6 +1,5 @@
 import React from 'react';
 import './HomeContent.scss';
-import CarHome from "../../assets/images/car-home.png";
 import ButtonLink from '../common/ButtonLink';
 import ArrowIcon from '../common/icons/ArrowIcon';
 
@@ -18,7 +17,7 @@ const HomeContent = () => {
                 
             </div>
             <figure className='carfigure'>
-                <img src={CarHome} style={{marginTop: -64}}/>
+                <img src={'/static/images/car-home.png'} style={{marginTop: -64}}/>
             </figure>
             <ButtonLink to={'/engines'} text={'Begin'} withLatterSpace icon={<ArrowIcon/>}/>
         </section>

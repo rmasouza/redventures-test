@@ -1,4 +1,22 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
 .engine-content {
-    // border: solid 1px blue;
-    
+    padding: 0 116px;
+    display: grid;
+    grid-auto-flow: column;
+
+    .title {
+        @extend .light ; 
+        font-size: 45px;
+        color: $secondary-color;
+        letter-spacing: 3.75px;
+    }
+
+    > .figure {
+        margin: 16px;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+    }
 }

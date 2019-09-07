@@ -12,6 +12,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const Dotenv = require('dotenv-webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const sourcePath = path.join(__dirname, './src');
 const outputhPath = path.resolve(__dirname, './dist');
@@ -141,7 +142,10 @@ const webpackConfig = {
         new Dotenv({
             path: path.join(__dirname, './.env'),
             systemvars: true
-        })
+        }),
+        new CopyWebpackPlugin([
+            { from: 'static', to: 'static' }
+        ])
     ],
     node: {
         module: 'empty',

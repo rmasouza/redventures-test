@@ -7,5 +7,5 @@ export interface EngineOption {
 }
 
 export interface EngineResponse {
-    items: Array<EngineResponse>;
+    items: Array<EngineOption>;
 }
