@@ -5,7 +5,7 @@ import { StoreProvider } from './stores/StoreProvider';
 import { configure } from 'mobx';
 import Layout from './components/common/layout/Layout';
 
-configure({enforceActions: 'observed'});
+configure({ enforceActions: 'observed' });
 
 const Home = lazy(() => import('./pages/Home'));
 const Engines = lazy(() => import('./pages/Engines'));
@@ -15,8 +15,8 @@ const App: React.FC = () => {
     return (
         <Router>
             <StoreProvider>
-                <Suspense fallback={<Loading />}>
-                    <Layout>
+                <Layout>
+                    <Suspense fallback={<Loading />}>
                         <Switch>
                             <Route path="/" exact strict component={Home} />
                             <Route path="/engines" exact strict component={Engines} />
@@ -25,8 +25,8 @@ const App: React.FC = () => {
                                 return <div>{window.location.pathname}</div>
                             }} />
                         </Switch>
-                    </Layout>
-                </Suspense>
+                    </Suspense>
+                </Layout>
             </StoreProvider>
         </Router>
     )

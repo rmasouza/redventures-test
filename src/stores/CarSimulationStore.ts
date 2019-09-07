@@ -28,6 +28,10 @@ export default class CarSimulationStore {
         return this._apiResponse === null ? '' : this._apiResponse.color.description;
     }
 
+    @computed get currentColor (): ColortOption | null {
+        return this.carSimulation.color;
+    }
+
     @computed get wheels (): Array<WheelOption> {
         return this._apiResponse === null ? [] : this._apiResponse.wheels.items;
     }
@@ -53,5 +57,10 @@ export default class CarSimulationStore {
     @action
     setCurrentEngine = (engine: EngineOption) => {
         this.carSimulation.engine = engine;
+    }
+
+    @action
+    setCurrentColor = (color: ColortOption) => {
+        this.carSimulation.color = color;
     }
 }
