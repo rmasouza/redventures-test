@@ -1,5 +1,5 @@
 import React from 'react';
-import RedVenturesLogo from './icons/RedVenturesLogo';
+import RedVenturesLogo from '../icons/RedVenturesLogo';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 

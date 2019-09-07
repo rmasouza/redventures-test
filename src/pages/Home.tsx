@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
-import Header from '../components/common/Header';
 import HomeFooter from '../components/home/HomeFooter';
 import HomeContent from '../components/home/HomeContent';
 import { useStore } from '../stores/StoreProvider';
@@ -14,11 +13,10 @@ const HomeBase = () => {
     },[])
 
     return (
-        <article className='home-page'>
-            <Header />
+        <React.Fragment>    
             <HomeContent />
             <HomeFooter />
-        </article>
+        </React.Fragment>
     )
 }
 

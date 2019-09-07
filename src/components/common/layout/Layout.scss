@@ -1,0 +1,5 @@
+.layout-component {
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    flex-grow: 1;
+}

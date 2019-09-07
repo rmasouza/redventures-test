@@ -1,6 +1,11 @@
 @import "../../styles/utils.scss";
 
 .home-content {
+    padding: 0 188px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     .headline {
         text-align: left;
         letter-spacing: 10.84px;
@@ -29,9 +34,4 @@
         display: flex;
         justify-content: center;
     }
-
-    padding: 0 72px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
