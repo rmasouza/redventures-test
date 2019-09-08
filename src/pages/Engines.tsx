@@ -8,7 +8,7 @@ import { observer } from 'mobx-react';
 const EnginesBase = () => {
     const store = useStore()
 
-    if(!store.currentEngine) {
+    if(store.engines.length == 0) {
         return <Redirect to='/' />
     }
     

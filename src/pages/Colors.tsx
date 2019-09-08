@@ -7,10 +7,10 @@ import { observer } from 'mobx-react-lite';
 const ColorsBase = () => {
     const store = useStore()
 
-    if(!store.currentColor) {
+    if(store.colors.length == 0) {
         return <Redirect to='/' />
     }
-    
+
     return (
         <React.Fragment>
             <ColorsContent/>

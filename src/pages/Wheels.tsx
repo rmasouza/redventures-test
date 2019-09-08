@@ -8,7 +8,7 @@ import { observer } from 'mobx-react-lite';
 const WheelsBase = () => {
     const store = useStore()
 
-    if(!store.currentWheel) {
+    if(store.wheels.length == 0) {
         return <Redirect to='/' />
     }
     
