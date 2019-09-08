@@ -36,6 +36,10 @@ export default class CarSimulationStore {
         return this._apiResponse === null ? [] : this._apiResponse.wheels.items;
     }
 
+    @computed get currentWheel (): WheelOption | null {
+        return this.carSimulation.wheel;
+    }
+
     @computed get finalPrice () : number {
         return this.carSimulation.finalPrice;
     }
@@ -62,5 +66,10 @@ export default class CarSimulationStore {
     @action
     setCurrentColor = (color: ColortOption) => {
         this.carSimulation.color = color;
+    }
+
+    @action
+    setCurrentWheel = (wheel: WheelOption) => {
+        this.carSimulation.wheel = wheel;
     }
 }

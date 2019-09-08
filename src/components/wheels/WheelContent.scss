@@ -1,0 +1,20 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.wheel-content {
+    padding-left: 116px;
+    padding-right: 116px;
+
+    > .title {
+        @extend .content-title ;
+        color: $secondary-color;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    > .list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 36px;
+    }
+}

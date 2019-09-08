@@ -1,0 +1,42 @@
+@import "../../styles/colors.scss";
+
+.wheel-option {
+    cursor: pointer;
+
+    > .figure {
+        opacity: 0.5;
+        margin-bottom: 36px;
+    } 
+
+    > .caption {
+        text-align: center;
+        color: $secondary-color;
+        font-size: 22px;
+        opacity: 0;
+    }
+
+    > .price {
+        @extend .caption ;
+        text-align: center;
+        display: block;
+        color: $primary-color;
+    }
+
+    >.figure,
+    > .caption,
+    > .price  {
+        transition: all 0.2s;
+    }
+
+    &.-current {
+        > .figure {
+            transform: scale(1.15);
+        }
+
+        > .figure,
+        > .caption, 
+        > .price {
+            opacity: 1;
+        }
+    }
+}

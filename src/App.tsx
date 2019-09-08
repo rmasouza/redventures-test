@@ -10,6 +10,7 @@ configure({ enforceActions: 'observed' });
 const Home = lazy(() => import('./pages/Home'));
 const Engines = lazy(() => import('./pages/Engines'));
 const Colors = lazy(() => import('./pages/Colors'));
+const Wheels = lazy(() => import('./pages/Wheels'));
 
 const App: React.FC = () => {
     return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
                             <Route path="/" exact strict component={Home} />
                             <Route path="/engines" exact strict component={Engines} />
                             <Route path="/colors" exact strict component={Colors} />
+                            <Route path="/wheels" exact strict component={Wheels} />
                             <Route render={() => {
                                 return <div>{window.location.pathname}</div>
                             }} />
