@@ -7,10 +7,7 @@
     grid-auto-flow: column;
 
     .title {
-        @extend .light ; 
-        font-size: 45px;
-        color: $secondary-color;
-        letter-spacing: 3.75px;
+        @extend .content-title ;
     }
 
     > .figure {

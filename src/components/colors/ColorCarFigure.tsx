@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './ColorCarFigure';
+import './ColorCarFigure.scss';
 import { ColortOption } from '../../models/Color';
 
 interface IColorCarFigureProps {
@@ -11,14 +11,14 @@ const ColorCarFigure: FC<IColorCarFigureProps> = (props: IColorCarFigureProps) =
     const image = props.currentColor == null ? '4.png' : `${props.currentColor.id}.png`
 
     return (
-        <figure>
-            <img src={`/static/images/${image}`}/>
+        <figure className='color-car-figure'>
+            <img className='figure' src={`/static/images/${image}`}/>
             {
                 currentColor && <>
-                    <figcaption>
+                    <figcaption className='caption'>
                         {currentColor.label}
                     </figcaption>
-                    <span> 
+                    <span className='price'> 
                         {
                             currentColor.price == 0 ? 'Included' : `+${currentColor.price}`
                         }

@@ -1,0 +1,21 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.color-option-list {
+    max-width: 480px;
+    > .title {
+        @extend .content-title ;
+        margin-bottom: 30px;
+    }
+
+    > .description  {
+        font-size: 16px;
+        color: $default-gray;
+        margin-bottom: 90px;
+    }
+
+    > .list {
+        display: flex;
+        justify-content: space-between;
+    }
+}

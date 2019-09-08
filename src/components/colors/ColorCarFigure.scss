@@ -1,0 +1,28 @@
+@import "../../styles/colors.scss";
+
+.color-car-figure {
+    margin: 16px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    max-width: 580px;
+    padding-top: 172px;
+
+    > .figure {
+        width: 520px;
+        height: 248px;
+        object-fit: contain;
+        transform: scale(1.6);
+        object-position: 15% 0;
+    }
+
+    > .caption {
+        font-size: 22px;
+        color: $secondary-color;
+    }
+
+    > .price {
+        @extend .caption;
+        color: $primary-color;
+    }
+}

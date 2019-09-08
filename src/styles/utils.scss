@@ -1,9 +1,5 @@
 @import "./colors.scss";
 
-.common-layout {
-    
-}
-
 .red-text {
     color: $primary-color;
 }
@@ -18,4 +14,11 @@
 
 .medium {
     font-weight: 500;
+}
+
+.content-title {
+    @extend .light ; 
+    font-size: 45px;
+    color: $secondary-color;
+    letter-spacing: 3.75px;
 }

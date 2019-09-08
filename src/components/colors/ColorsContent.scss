@@ -1,0 +1,8 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.color-content {
+    padding: 0 116px;
+    display: grid;
+    grid-auto-flow: column;
+}

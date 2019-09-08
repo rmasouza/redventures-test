@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
-import Colors from '../../pages/Colors';
+import './ColorsContent.scss';
 import ColorCarFigure from './ColorCarFigure';
+import ColorOptionComponent from './ColorOptionComponent';
 import { observer } from 'mobx-react';
 import { useStore } from '../../stores/StoreProvider';
-import ColorOptionComponent from './ColorOptionComponent';
 import { ColortOption } from '../../models/Color';
+import ColorOptionList from './ColorOptionList';
+import Colors from '../../pages/Colors';
+
 const ColorsContentBase = () => {
     const store = useStore();
     useEffect(()=> {
@@ -20,15 +23,9 @@ const ColorsContentBase = () => {
 
 
     return (
-        <section>
+        <section className='color-content'>
             <ColorCarFigure currentColor={store.currentColor}/>
-            <aside>
-                {
-                    store.colors.map( it => 
-                        <ColorOptionComponent key={it.id} color={it} setCurrentColor={onColorOptionClick}/>
-                    )
-                }
-            </aside>
+            <ColorOptionList colors={store.colors} currentOption={store.currentColor} description={store.colorDescription} onColorOptionClick={onColorOptionClick}/>
         </section>
     )
 }
