@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loading from './components/common/Loading';
 import { StoreProvider } from './stores/StoreProvider';
@@ -11,6 +11,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Engines = lazy(() => import('./pages/Engines'));
 const Colors = lazy(() => import('./pages/Colors'));
 const Wheels = lazy(() => import('./pages/Wheels'));
+const Resume = lazy(() => import('./pages/Resume'));
 
 const App: React.FC = () => {
     return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
                             <Route path="/engines" exact strict component={Engines} />
                             <Route path="/colors" exact strict component={Colors} />
                             <Route path="/wheels" exact strict component={Wheels} />
+                            <Route path="/resume" exact strict component={Resume} />
                             <Route render={() => {
                                 return <div>{window.location.pathname}</div>
                             }} />

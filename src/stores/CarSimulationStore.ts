@@ -49,13 +49,22 @@ export default class CarSimulationStore {
     }
     
     getApiResponse = async () => {
-        console.log('calling api')
         const result = await axios.get<{data:ApiResponse}>('https://next.json-generator.com/api/json/get/41ORKNZDU');
-        
         runInAction(() => {
             this._apiResponse = result.data.data;
             this.carSimulation.initialPrice = this._apiResponse.price;
+            // this.reset()
+            console.log(this.carSimulation)
         })
+    }
+
+    @action
+    reset = () => {
+        if(this._apiResponse == null) {return}
+        
+        this.setCurrentEngine(this._apiResponse.engine.items[0])
+        this.setCurrentColor(this._apiResponse.color.items[0])
+        this.setCurrentWheel(this._apiResponse.wheels.items[0])
     }
 
     @action

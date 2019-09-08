@@ -18,8 +18,8 @@ const WheelOptionComponent: FC<IWheelOptionComponentProps> = (props: IWheelOptio
     }
 
     return (
-        <figure  className={'wheel-option ' + `${isCurrent && '-current'}`}  onClick={onClick}>
-            <img className='figure' src={`/static/images/${wheel.id}.png`}/><img/>
+        <figure  className={'wheel-option ' + `${isCurrent && '-current'}`}>
+            <img className='figure' src={`/static/images/${wheel.id}.png`} onClick={onClick}/>
             <figcaption className='caption'>
                 {wheel.label}
             </figcaption>

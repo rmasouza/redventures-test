@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import './Home.scss';
 import HomeFooter from '../components/home/HomeFooter';
 import HomeContent from '../components/home/HomeContent';
 import { useStore } from '../stores/StoreProvider';
