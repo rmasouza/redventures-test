@@ -1,7 +1,5 @@
-// @font-face {
-//     font-family: 'Saira Condensed';
-//     src: url('https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500&display=swap');
-//   }
+@import "./styles/colors.scss";
+@import "./styles/utils.scss";
 
 @import url('https://fonts.googleapis.com/css?family=Saira+Condensed:300,400,500&display=swap');
 
@@ -14,4 +12,25 @@ body, html, main {
 
 main {
     display: flex;
+}
+
+._404 {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding-top: 144px;
+
+    .title {
+        margin: 0;
+        font-size: 144px;
+        color: $primary-color;
+        @extend .medium ;
+    }
+
+    .label {
+        font-size: 48px;
+        display: block;
+        color: $secondary-color;
+    }
 }

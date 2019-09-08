@@ -1,9 +1,10 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loading from './components/common/Loading';
-import { StoreProvider } from './stores/StoreProvider';
+import { StoreProvider, useStore } from './stores/StoreProvider';
 import { configure } from 'mobx';
 import Layout from './components/common/layout/Layout';
+import _404 from './pages/404';
 
 configure({ enforceActions: 'observed' });
 
@@ -14,6 +15,7 @@ const Wheels = lazy(() => import('./pages/Wheels'));
 const Resume = lazy(() => import('./pages/Resume'));
 
 const App: React.FC = () => {
+
     return (
         <Router>
             <StoreProvider>
@@ -25,9 +27,7 @@ const App: React.FC = () => {
                             <Route path="/colors" exact strict component={Colors} />
                             <Route path="/wheels" exact strict component={Wheels} />
                             <Route path="/resume" exact strict component={Resume} />
-                            <Route render={() => {
-                                return <div>{window.location.pathname}</div>
-                            }} />
+                            <Route component={_404}/>
                         </Switch>
                     </Suspense>
                 </Layout>
