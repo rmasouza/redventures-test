@@ -1,5 +1,5 @@
 import React from 'react';
-import SimulationResume from '../components/common/simulation/SimulationResume';
+import ResumeStepFooter from '../components/resume/ResumeStepFooter';
 import EngineContent from '../components/engines/EngineContent';
 import { useStore } from '../stores/StoreProvider';
 import { Redirect } from 'react-router';
@@ -15,7 +15,7 @@ const EnginesBase = () => {
     return (
         <React.Fragment>
             <EngineContent/>
-            <SimulationResume/>
+            <ResumeStepFooter/>
         </React.Fragment>
     )
 }

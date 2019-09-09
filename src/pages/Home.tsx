@@ -8,7 +8,13 @@ const HomeBase = () => {
     const store = useStore();
 
     useEffect(() => {
-         store.getApiResponse();
+        try {
+            store.getApiResponse();
+        } catch (e) {
+            console.error(e);
+            alert('unable to get data from server')
+        }
+         
     },[])
 
     return (

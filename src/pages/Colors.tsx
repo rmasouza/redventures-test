@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorsContent from '../components/colors/ColorsContent';
-import SimulationResume from '../components/common/simulation/SimulationResume';
+import ResumeStepFooter from '../components/resume/ResumeStepFooter';
 import { useStore } from '../stores/StoreProvider';
 import { Redirect } from 'react-router';
 import { observer } from 'mobx-react-lite';
@@ -14,7 +14,7 @@ const ColorsBase = () => {
     return (
         <React.Fragment>
             <ColorsContent/>
-            <SimulationResume/>
+            <ResumeStepFooter/>
         </React.Fragment>
     )
 }

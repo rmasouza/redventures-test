@@ -4,6 +4,7 @@
     color: $secondary-color;
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
     
     > .text{
         text-transform: uppercase;
@@ -14,7 +15,6 @@
             letter-spacing: 9.42px;
         }
     }
-
 
     > .icon {
         margin-left: 15px;

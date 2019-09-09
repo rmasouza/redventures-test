@@ -4,6 +4,7 @@ import { observer } from 'mobx-react';
 import { useStore } from '../../stores/StoreProvider';
 import ButtonLink from '../common/ButtonLink';
 import useCurrency from '../../hooks/useCurrency';
+import CircularArrow from '../common/icons/CircularArrow';
 
 const ResumeContentBase = () => {
     const store = useStore();
@@ -14,6 +15,10 @@ const ResumeContentBase = () => {
     const enginePrice = useCurrency(store.currentEngine!.price);
     const colorPrice = useCurrency(store.currentColor!.price);
     const wheelPrice = useCurrency(store.currentWheel!.price);
+
+    const onButtonClick = () => {
+        store.reset()
+    }
     
     return (
         <section className='resume-conntent'>
@@ -41,7 +46,7 @@ const ResumeContentBase = () => {
                 <span className='price'> {finalPrice.formatted} </span>
             </p>
             <section className='button'>
-            <ButtonLink  text='Rebuild' to='/engines'/>
+                <ButtonLink  text='Rebuild' to='/engines' icon={<CircularArrow/>} onButtonClick={onButtonClick}/>
             </section>
         </section>
     )

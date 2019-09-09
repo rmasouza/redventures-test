@@ -1,5 +1,5 @@
 import React from 'react';
-import SimulationResume from '../components/common/simulation/SimulationResume';
+import ResumeStepFooter from '../components/resume/ResumeStepFooter';
 import WheelContent from '../components/wheels/WheelContent';
 import { useStore } from '../stores/StoreProvider';
 import { Redirect } from 'react-router';
@@ -15,7 +15,7 @@ const WheelsBase = () => {
     return (
         <React.Fragment>
             <WheelContent/>
-            <SimulationResume/>
+            <ResumeStepFooter/>
         </React.Fragment>
     )
 }

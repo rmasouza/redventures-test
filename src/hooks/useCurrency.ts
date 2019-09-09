@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-type CurrecyFormatter = { formatted: string, currency: number, setCurrency: (value: number) => void }
+interface CurrecyFormatter { formatted: string, currency: number, setCurrency: (value: number) => void }
 const useCurrency = (value: number, withSymbol: boolean = true) : CurrecyFormatter => {
     const formatter = new Intl.NumberFormat('en-IN', {
         style: 'currency',

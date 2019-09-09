@@ -1,0 +1,57 @@
+@import "../../styles/utils.scss";
+@import "../../styles/colors.scss";
+
+.resume-step {
+    // background-color: aquamarine;
+    @extend .regular ;
+    height:  85px;
+    background: #FFFFFF;
+    box-shadow: 8px 0 47px 0 rgba(0,0,0,0.08);
+    padding: 8px 116px;
+    display: grid;
+    grid-gap: 36px;
+    grid-template-columns: 128px auto auto auto auto 128px;
+    align-items: center;
+
+    > .total {
+        > .label {
+            @extend .medium ;
+            display: block;
+            font-size: 16px;    
+            letter-spacing: 2.06px;
+        }
+
+        > .price {
+            @extend .light ;
+            color: $primary-color;
+            font-size: 32px;
+            letter-spacing: 3.75px;
+        }
+    }
+
+    > .model {
+        font-size: 16px;
+        letter-spacing: 2.06px;
+    }
+
+    > .engine {
+        font-size: 18px;
+        letter-spacing: 1.5px;
+
+        > .strong {
+            color: $primary-color;
+        }
+    }
+
+    > .color {
+        > .img {
+            width: 22px;
+        }
+    }
+
+    > .wheel {
+        > .img {
+            width: 48px;
+        }
+    }
+}

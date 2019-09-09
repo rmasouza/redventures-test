@@ -61,24 +61,23 @@ export default class CarSimulationStore {
     @action
     reset = () => {
         if(this._apiResponse == null) {return}
-        
-        this.setCurrentEngine(this._apiResponse.engine.items[0])
-        this.setCurrentColor(this._apiResponse.color.items[0])
-        this.setCurrentWheel(this._apiResponse.wheels.items[0])
+        this.setCurrentEngine(null)
+        this.setCurrentColor(null)
+        this.setCurrentWheel(null)
     }
 
     @action
-    setCurrentEngine = (engine: EngineOption) => {
+    setCurrentEngine = (engine: EngineOption | null) => {
         this.carSimulation.engine = engine;
     }
 
     @action
-    setCurrentColor = (color: ColortOption) => {
+    setCurrentColor = (color: ColortOption | null) => {
         this.carSimulation.color = color;
     }
 
     @action
-    setCurrentWheel = (wheel: WheelOption) => {
+    setCurrentWheel = (wheel: WheelOption | null) => {
         this.carSimulation.wheel = wheel;
     }
 }
