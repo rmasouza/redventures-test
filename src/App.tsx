@@ -5,6 +5,7 @@ import { StoreProvider, useStore } from './stores/StoreProvider';
 import { configure } from 'mobx';
 import Layout from './components/common/layout/Layout';
 import _404 from './pages/404';
+import { register } from './ServiceWorker';
 
 configure({ enforceActions: 'observed' });
 
@@ -35,5 +36,7 @@ const App: React.FC = () => {
         </Router>
     )
 };
+
+register();
 
 export default App;
