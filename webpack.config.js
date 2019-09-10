@@ -17,7 +17,6 @@ const sourcePath = path.join(__dirname, './src');
 const outputhPath = path.resolve(__dirname, './dist');
 
 dotenv.config();
-console.log(process.env.NODE_ENV);
 
 const webpackConfig = {
     context: sourcePath,
@@ -105,9 +104,9 @@ const webpackConfig = {
             openAnalyzer: false,
         }),
         new WebpackPwaManifest({
-            name: 'Red Ventures Test',
-            short_name: 'Red Ventures Test',
-            description: 'My Awesome Red Ventures Test Progressive Web App!',
+            name: 'Red Ventures | Test',
+            short_name: 'Red Ventures | Test',
+            description: 'My Awesome Red Ventures Progressive Web App!',
             background_color: '#fff',
             theme_color: '#AB1725',
             display: 'standalone',
@@ -131,8 +130,6 @@ const webpackConfig = {
                 }
             ],
             ios: {
-                // 'apple-touch-icon': string | IosAppleTouchIcon,
-                // 'apple-touch-startup-image': string,
                 'apple-mobile-web-app-title': 'Red Ventures Test',
                 'apple-mobile-web-app-capable': true,
                 'apple-mobile-web-app-status-bar-style': 'black'

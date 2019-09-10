@@ -16,7 +16,6 @@ const useCurrency = (value: number, withSymbol: boolean = true) : CurrecyFormatt
         } else {
             setFormatted(formatter.format(currency).replace('US$', '').split('.')[0])
         }
-        
     }, [currency])
 
     return {

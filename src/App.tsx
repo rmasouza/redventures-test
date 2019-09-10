@@ -18,8 +18,9 @@ const Resume = lazy(() => import('./pages/Resume'));
 const App: React.FC = () => {
 
     return (
+        <StoreProvider>
         <Router>
-            <StoreProvider>
+            
                 <Layout>
                     <Suspense fallback={<Loading />}>
                         <Switch>
@@ -32,8 +33,9 @@ const App: React.FC = () => {
                         </Switch>
                     </Suspense>
                 </Layout>
-            </StoreProvider>
+            
         </Router>
+        </StoreProvider>
     )
 };
 

@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import './ResumeStepFooter.scss';
-import { observer } from 'mobx-react-lite';
+import { observer } from 'mobx-react';
 import { useStore } from '../../stores/StoreProvider';
 import ButtonLink from '../common/ButtonLink';
 import { withRouter, RouteProps } from 'react-router';
 import ArrowIcon from '../common/icons/ArrowIcon';
 import useCurrency from '../../hooks/useCurrency';
-
 
 const ResumeStepFooterBase: FC<RouteProps> = (props: RouteProps) => {
     const { location } = props;
@@ -20,6 +19,10 @@ const ResumeStepFooterBase: FC<RouteProps> = (props: RouteProps) => {
     }
 
     const currentPath: string = location ? location.pathname : '/';
+
+    useEffect(()=> {
+        finalPrice.setCurrency(store.finalPrice)
+    }, [store.finalPrice])
 
     return (
         <footer className='resume-step'>

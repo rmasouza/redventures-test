@@ -22,11 +22,7 @@
         }  
 
         &.-red {
-            
-        }
-
-        &.-inline {
-            
+            @extend .red-text ;
         }
 
         &.-featured > .type {
