@@ -7,6 +7,7 @@ import { useStore } from '../../stores/StoreProvider';
 import { ColortOption } from '../../models/Color';
 import ColorOptionList from './ColorOptionList';
 import Colors from '../../pages/Colors';
+import Container from '../common/layout/Container';
 
 const ColorsContentBase = () => {
     const store = useStore();
@@ -23,10 +24,10 @@ const ColorsContentBase = () => {
 
 
     return (
-        <section className='color-content'>
+        <Container className='color-content'>
             <ColorCarFigure currentColor={store.currentColor}/>
             <ColorOptionList colors={store.colors} currentOption={store.currentColor} description={store.colorDescription} onColorOptionClick={onColorOptionClick}/>
-        </section>
+        </Container>
     )
 }
 const ColorsContent = observer(ColorsContentBase);

@@ -4,6 +4,7 @@ import { observer } from 'mobx-react';
 import EngineOptionComponent from './EngineOptionComponent';
 import { useStore } from '../../stores/StoreProvider';
 import { EngineOption } from '../../models/Engine';
+import Container from '../common/layout/Container';
 const EngineContentBase = () => {
     const store = useStore();
 
@@ -21,11 +22,11 @@ const EngineContentBase = () => {
     }
 
     return (
-        <section className='engine-content'>
+        <Container className='engine-content'>
             <figure className='figure'>
-                <img src={`/static/images/${image}`}/>
+                <img  className='img' src={`/static/images/${image}`}/>
             </figure>
-            <aside>
+            <section>
                 <h1 className='title'>Engine</h1>
                 {
                     store.engines.map( it => 
@@ -35,8 +36,8 @@ const EngineContentBase = () => {
                             currentOption={store.currentEngine} 
                             setCurrentEngine={onEngineOptionClick}/>)
                 }
-            </aside>
-        </section>
+            </section>
+        </Container>
     )
 }
 

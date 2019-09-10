@@ -1,16 +1,18 @@
 .color-option {
     cursor: pointer;
     
+
     > .option {
         border-radius: 50%;
         border: 11px solid rgba(112,112,112,0.09);
-        transition: all 0.2s;
+        transition: all 0.2s;    
     }
 
     &.-current {
         >.option {
             box-shadow: -4px 4px 13px 0 rgba(0,0,0,0.32);
             border: 11px solid #2E3948;
+            transition: all 0.3s linear;
         }
     }    
 }

@@ -1,4 +1,5 @@
 @import "../../styles/colors.scss";
+@import "../../styles/utils.scss";
 
 .color-car-figure {
     margin: 16px;
@@ -24,5 +25,21 @@
     > .price {
         @extend .caption;
         color: $primary-color;
+    }
+
+    @media (max-width: $small-screen)   { 
+        padding-top: 0;
+        margin: 0;
+        max-width: 325px;
+        max-height: unset;
+        justify-content: center;
+
+        > .figure {
+            object-fit: scale-down;
+            transform: unset;
+            object-position: 50% 0;
+            max-width: 325px;
+            max-height: 182px;
+        }
     }
 }

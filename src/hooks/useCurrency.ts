@@ -12,9 +12,9 @@ const useCurrency = (value: number, withSymbol: boolean = true) : CurrecyFormatt
 
     useEffect(() => {
         if(withSymbol) {
-            setFormatted(formatter.format(currency).replace('US', ''))
+            setFormatted(formatter.format(currency).replace('US', '').split('.')[0])
         } else {
-            setFormatted(formatter.format(currency).replace('US$', ''))
+            setFormatted(formatter.format(currency).replace('US$', '').split('.')[0])
         }
         
     }, [currency])

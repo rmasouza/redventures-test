@@ -14,6 +14,7 @@
         font-size: 30px;
         line-height: 36px;
 
+        
         &.-featured {
             letter-spacing: 12.5px; 
             font-size: 150px;
@@ -21,10 +22,16 @@
         }  
 
         &.-red {
-            @extend .red-text ;
+            
         }
 
         &.-inline {
+            
+        }
+
+        &.-featured > .type {
+            @extend .red-text ;
+            margin-left: 54px;
             display: inline;
         }
     }
@@ -33,5 +40,40 @@
         margin: 0;
         display: flex;
         justify-content: center;
+    }
+    
+    > .carfigure > .img{
+        margin-top: -64px;
+    }
+
+    @media (max-width: $small-screen)  {
+        padding: 0 15px;
+        align-items: center;
+
+        .headline {
+            font-size: 20px;
+
+            &.-featured {
+                font-size: 90px;
+                line-height: 90px;
+                letter-spacing: 7.5px;
+            }
+
+            &.-featured > .type {
+                margin-left: 20px;
+            }
+        }
+
+        > .carfigure {
+            overflow: hidden;
+            max-width: 320px;
+        }
+
+        > .carfigure > .img{
+            margin-top: -24px;
+            object-fit: scale-down;
+            max-width: 378px;
+            height: 148px;
+        }
     }
 }

@@ -5,6 +5,7 @@ import { useStore } from '../../stores/StoreProvider';
 import ButtonLink from '../common/ButtonLink';
 import useCurrency from '../../hooks/useCurrency';
 import CircularArrow from '../common/icons/CircularArrow';
+import Container from '../common/layout/Container';
 
 const ResumeContentBase = () => {
     const store = useStore();
@@ -21,7 +22,7 @@ const ResumeContentBase = () => {
     }
     
     return (
-        <section className='resume-conntent'>
+        <Container className='resume-conntent'>
             <h1 className='title'> Your <strong className='strong'>Model <span className='red'>R</span> </strong> </h1>
             <p className='line'>
                 <span> Starting Price </span>
@@ -48,7 +49,7 @@ const ResumeContentBase = () => {
             <section className='button'>
                 <ButtonLink  text='Rebuild' to='/engines' icon={<CircularArrow/>} onButtonClick={onButtonClick}/>
             </section>
-        </section>
+        </Container>
     )
 }
 

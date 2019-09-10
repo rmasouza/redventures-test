@@ -2,7 +2,11 @@
 @import "../../styles/colors.scss";
 
 .color-content {
-    padding: 0 116px;
     display: grid;
     grid-auto-flow: column;
+
+    @media (max-width: $small-screen)  { 
+        grid-auto-flow: row;
+        justify-content: center;
+    }
 }

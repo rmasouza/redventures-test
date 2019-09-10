@@ -2,8 +2,7 @@
 @import "../../styles/colors.scss";
 
 .wheel-content {
-    padding-left: 116px;
-    padding-right: 116px;
+    display: block;
 
     > .title {
         @extend .content-title ;
@@ -16,5 +15,20 @@
         display: flex;
         justify-content: space-around;
         margin-top: 36px;
+    }
+
+    @media (max-width: $small-screen)  { 
+        
+
+        .title {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        > .list {
+            flex-direction: column;
+            justify-content: space-around;
+            
+        }
     }
 }

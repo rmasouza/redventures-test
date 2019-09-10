@@ -5,12 +5,13 @@ import { useStore } from '../../stores/StoreProvider';
 import ButtonLink from '../common/ButtonLink';
 import { withRouter, RouteProps } from 'react-router';
 import ArrowIcon from '../common/icons/ArrowIcon';
+import useCurrency from '../../hooks/useCurrency';
 
 
 const ResumeStepFooterBase: FC<RouteProps> = (props: RouteProps) => {
     const { location } = props;
     const store = useStore();
-
+    const finalPrice = useCurrency(store.finalPrice);
 
     const steps: Record<string, string> = {
         '/engines': '/colors',
@@ -24,7 +25,7 @@ const ResumeStepFooterBase: FC<RouteProps> = (props: RouteProps) => {
         <footer className='resume-step'>
             <section className='total'>
                 <label className='label'>Total</label>
-                <span className='price'>{store.finalPrice}</span>
+                <span className='price'>{finalPrice.formatted}</span>
             </section>
 
             <section className='model'>Model R</section>

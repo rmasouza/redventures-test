@@ -1,6 +1,5 @@
 'use strict';
 const path = require('path');
-const webpack = require('webpack');
 const compression = require('compression');
 const dotenv = require('dotenv');
 
@@ -8,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const InlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const Dotenv = require('dotenv-webpack');
@@ -60,7 +59,7 @@ const webpackConfig = {
     mode: process.env.NODE_ENV,
     optimization: {
         minimizer: [
-            new UglifyJsPlugin({
+            new TerserPlugin({
                 test: /\.js(\?.*)?$/i,
             }),
         ],
@@ -108,7 +107,7 @@ const webpackConfig = {
         new WebpackPwaManifest({
             name: 'Red Ventures Test',
             short_name: 'Red Ventures Test',
-            description: 'My Awesome Progressive Web App!',
+            description: 'My Awesome Red Ventures Test Progressive Web App!',
             background_color: '#fff',
             theme_color: '#AB1725',
             display: 'standalone',

@@ -3,8 +3,6 @@
 
 .resume-conntent {
     padding-top: 56px;
-    padding-left: 116px;
-
     max-width: 480px;
 
     .red {
@@ -46,6 +44,28 @@
 
     .button {
         text-align: center;
+    }
+
+    @media (max-width: $small-screen)  { 
+        padding-top: 24px;
+        grid-auto-flow: row;
+        max-width: unset;;
+        
+        .title {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        > .line { 
+            padding: 8px 0;
+            margin: 8px 0;
+            font-size: 14px;
+
+            &.-bigger {
+                font-size: 18px;
+                padding: 16px 0;
+            }
+        }
     }
     
 }

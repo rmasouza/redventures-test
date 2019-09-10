@@ -4,6 +4,7 @@ import { observer } from 'mobx-react';
 import { useStore } from '../../stores/StoreProvider';
 import WheelOptionComponent from './WheelOptionComponent';
 import { WheelOption } from '../../models/Wheel';
+import Container from '../common/layout/Container';
 
 const WheelContentBase = () => {
     const store = useStore();
@@ -20,7 +21,7 @@ const WheelContentBase = () => {
     }, [])
 
     return (
-        <section className='wheel-content'>
+        <Container className='wheel-content'>
             <h1 className='title'> Wheels </h1>
             <section className='list'>
                 {
@@ -34,7 +35,7 @@ const WheelContentBase = () => {
                     )
                 }
             </section>
-        </section>
+        </Container>
     )
 }
 

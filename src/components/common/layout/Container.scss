@@ -1,0 +1,11 @@
+@import "../../../styles/utils.scss";
+
+.container-component {
+    padding-left:116px;
+    padding-right: 116px;
+    
+    @media (max-width: $small-screen)  {
+        padding-left:24px;
+        padding-right: 24px;
+    }
+}

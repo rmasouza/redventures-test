@@ -2,7 +2,6 @@
 @import "../../styles/colors.scss";
 
 .resume-step {
-    // background-color: aquamarine;
     @extend .regular ;
     height:  85px;
     background: #FFFFFF;
@@ -52,6 +51,18 @@
     > .wheel {
         > .img {
             width: 48px;
+        }
+    }
+
+    @media (max-width: $small-screen)  {
+        padding: 2px 24px;
+        justify-content: space-between;
+        grid-template-columns: max-content max-content;
+        > .model,
+        > .engine,
+        > .color,
+        > .wheel  {
+            display: none;
         }
     }
 }

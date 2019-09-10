@@ -5,13 +5,11 @@
     height: 85px;
     margin: 0;
     min-width: 110px;
-    // background-color: aquamarine;
 
     border-bottom: 3px solid $primary-color;
 
     > .value {
         @extend .red-text ;
-        // font-size: 36px;
         font-size: 42px;
 
     }
@@ -28,5 +26,19 @@
         color: #0F1C2D;
         margin-top: -14px;
         letter-spacing: 1.5px;
+    }
+
+    @media (max-width: $small-screen)  {
+        min-width: 100px;
+        height: 72px;
+
+        > .value {
+            font-size: 32px;
+        }
+
+        > .description { 
+            font-size: 14px;
+            margin-top: -7px;
+        }
     }
 }

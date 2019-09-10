@@ -1,7 +1,7 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Loading from './components/common/Loading';
-import { StoreProvider, useStore } from './stores/StoreProvider';
+import { StoreProvider } from './stores/StoreProvider';
 import { configure } from 'mobx';
 import Layout from './components/common/layout/Layout';
 import _404 from './pages/404';

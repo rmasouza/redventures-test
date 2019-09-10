@@ -14,7 +14,7 @@ interface ColorOptionList {
 const ColorOptionList: FC<ColorOptionList> = (props: ColorOptionList) => {
     const { colors, description, currentOption, onColorOptionClick } = props;
     return (
-        <aside className='color-option-list'>
+        <section className='color-option-list'>
             <h1 className='title'>Color</h1>
             <p className='description'> {description} </p>
             <section className='list'>
@@ -24,7 +24,7 @@ const ColorOptionList: FC<ColorOptionList> = (props: ColorOptionList) => {
                 )
             }
             </section>
-        </aside>
+        </section>
     )
 }
 
