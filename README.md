@@ -5,7 +5,7 @@
 To install and run simple execute
 
 ```bash
-yarn
+ yarn --production=false
 yarn start
 
 #or 
@@ -13,6 +13,8 @@ yarn start
 npm install
 npm start
 ```
+
+this app is also avaliable at [redventures.romulomessias.dev/](https://redventures.romulomessias.dev/)
 
 ## **What I used**
 
