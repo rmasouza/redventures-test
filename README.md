@@ -1,4 +1,6 @@
 # **Red Ventures Test**
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frmasouza%2Fredventures-test.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frmasouza%2Fredventures-test?ref=badge_shield)
+
 
 ## **How to run** 
 
@@ -101,3 +103,6 @@ I just did some realy simple animations in wheel selection.
 ### Test (unity test at least)
 
 I couldn't write some test but i would like to use jest for that,with [enzime](https://github.com/airbnb/enzyme) or [puppeteer](https://github.com/GoogleChrome/puppeteer) for testing ui components. 
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frmasouza%2Fredventures-test.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frmasouza%2Fredventures-test?ref=badge_large)
